@@ -11,14 +11,14 @@
  * @license     MIT
  * @since       1.0.0
  */
-namespace Fratily\Cache\SimpleCache\Exception;
+namespace Fratily\Cache\Exception;
 
 use Psr\SimpleCache\CacheException;
 
 /**
  *
  */
-class CacheItemPoolException extends \LogicException implements CacheException{
+class SimpleCacheItemPoolException extends \LogicException implements CacheException{
 
     const MSG  = "Cache item pool threw an exception.";
 

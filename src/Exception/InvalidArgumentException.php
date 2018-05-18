@@ -11,12 +11,10 @@
  * @license     MIT
  * @since       1.0.0
  */
-namespace Fratily\Cache\SimpleCache\Exception;
-
-use Psr\SimpleCache\InvalidArgumentException as InvalidArgumentExceptionInterface;
+namespace Fratily\Cache\Exception;
 
 /**
  *
  */
-class InvalidArgumentException extends \InvalidArgumentException implements InvalidArgumentExceptionInterface{
+class InvalidArgumentException extends \InvalidArgumentException implements Psr\Cache\InvalidArgumentException, Psr\SimpleCache\InvalidArgumentException{
 }

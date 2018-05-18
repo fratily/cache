@@ -11,7 +11,7 @@
  * @license     MIT
  * @since       1.0.0
  */
-namespace Fratily\Cache\SimpleCache;
+namespace Fratily\Cache;
 
 use Psr\SimpleCache\CacheInterface;
 use Psr\Cache\{
@@ -23,7 +23,7 @@ use Psr\Cache\{
 /**
  *
  */
-class SimpleCacheAdapter implements CacheInterface{
+class SimpleCache implements CacheInterface{
 
     /**
      * @var CacheItemPoolInterface
@@ -43,7 +43,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $item->isHit() ? $item->get() : $default;
@@ -63,7 +63,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
@@ -78,7 +78,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
@@ -91,7 +91,7 @@ class SimpleCacheAdapter implements CacheInterface{
         try{
             $result = $this->pool->clear();
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
@@ -108,7 +108,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $items;
@@ -130,7 +130,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
@@ -145,7 +145,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
@@ -160,7 +160,7 @@ class SimpleCacheAdapter implements CacheInterface{
         }catch(InvalidArgumentException $e){
             throw new Exception\InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
         }catch(CacheException $e){
-            throw new Exception\CacheItemPoolException(null, 0, $e);
+            throw new Exception\SimpleCacheItemPoolException(null, 0, $e);
         }
 
         return $result;
