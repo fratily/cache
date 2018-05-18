@@ -274,6 +274,17 @@ abstract class AbstractDriver implements CacheItemPoolInterface{
     }
 
     /**
+     * ドライバオプションを正規化する
+     *
+     * @param   mixed[]
+     *
+     * @return  mixed[]
+     */
+    protected function normalizeOptions(array $options){
+        return $options;
+    }
+
+    /**
      * キャッシュアイテムを削除する
      *
      * @param   string  $key
@@ -281,13 +292,4 @@ abstract class AbstractDriver implements CacheItemPoolInterface{
      * @return  bool
      */
     abstract protected function delete(string $key);
-
-    /**
-     * ドライバオプションを正規化する
-     *
-     * @param   mixed[]
-     *
-     * @return  mixed[]
-     */
-    abstract protected function normalizeOptions(array $options);
 }
