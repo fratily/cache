@@ -14,11 +14,9 @@
 namespace Fratily\Cache;
 
 use Psr\SimpleCache\CacheInterface;
-use Psr\Cache\{
-    CacheItemPoolInterface,
-    CacheException,
-    InvalidArgumentException
-};
+use Psr\Cache\CacheItemPoolInterface;
+use Psr\Cache\CacheException;
+use Psr\Cache\InvalidArgumentException;
 
 /**
  *
