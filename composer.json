@@ -2,9 +2,9 @@
     "name": "fratily/cache",
     "keywords": [
         "Fratily",
-        "PSR-6",
+        "psr-6",
         "cache",
-        "PSR-16",
+        "psr-16",
         "simple-cache"
     ],
     "authors": [
